@@ -39,12 +39,6 @@ Pi_tau= [ 0.9   0.1  0
           0.05  0.9  0.05
           0     0.1  0.9  ];
 
-
-% zg= exp([-0.0336 0 ]');
-% nz= 2;
-% Pi_z=   [ 0.8 0.2
-%           0.2 0.8 ];
-
 % productivity grid
 zg= exp([-0.0673  -0.0336 0   0.0336  0.0673]');
 nz= length(zg);
@@ -97,7 +91,7 @@ Ig_agg= linspace( (1-i_fac)*iss, (1+i_fac)*iss, nI)';
 
 
 %----------------------------------------------------------------------------
-%  value function iteration
+%  solve the recursive competitive equilibrium
 %----------------------------------------------------------------------------
 % do model under certainty
 if (do_deterministic==1)
